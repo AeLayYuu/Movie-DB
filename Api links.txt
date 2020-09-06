@@ -1,0 +1,14 @@
+ 
+popular
+https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
+
+latest
+ https://api.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
+
+rated
+ https://api.themoviedb.org/3/movie/top_rated?api_key=<<f5b4b4a244942dc69732aa01528c2054>>&language=en-US&page=1
+
+details
+ https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+
+var API_KEY = "f5b4b4a244942dc69732aa01528c2054"

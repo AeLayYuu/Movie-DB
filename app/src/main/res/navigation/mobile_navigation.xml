@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_nowplay">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.wya.movieapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.wya.movieapp.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.wya.movieapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_rated"
+        android:name="com.wya.movieapp.ui.rated.RatedFragment"
+        android:label="Top Rated Movies"
+        tools:layout="@layout/fragment_rated" >
+        <action
+            android:id="@+id/action_nav_rated_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.wya.movieapp.ui.details.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+
+        <argument
+            android:name="detailsID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="com.wya.movieapp.ui.popular.PopularFragment"
+        android:label="Popular Movies"
+        tools:layout="@layout/fragment_popular" />
+    <fragment
+        android:id="@+id/nav_nowplay"
+        android:name="com.wya.movieapp.ui.Play.PlayFragment"
+        android:label="Now Playing Movies"
+        tools:layout="@layout/fragment_play" />
+</navigation>
